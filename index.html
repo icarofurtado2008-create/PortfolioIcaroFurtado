@@ -1,54 +1,1651 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfólio de Ícaro Furtado: sites modernos, estratégicos e responsivos para negócios que querem conquistar confiança e gerar oportunidades.">
-  <meta name="theme-color" content="#0F172A">
-  <title>Ícaro Furtado Desenvolvedor | Sites que marcam</title>
-  <style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ícaro Furtado — Desenvolvedor Web</title>
+    <meta name="description" content="Desenvolvo landing pages e sites institucionais modernos, responsivos e estratégicos para marcas que querem transmitir confiança e gerar novas oportunidades.">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ícaro Furtado — Desenvolvedor Web">
+    <meta property="og:description" content="Desenvolvo landing pages e sites institucionais modernos, responsivos e estratégicos.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:image:alt" content="Código na tela de um computador simbolizando desenvolvimento web">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Ícaro Furtado — Desenvolvedor Web">
+    <meta property="twitter:description" content="Desenvolvo landing pages e sites institucionais modernos, responsivos e estratégicos.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-primary: #050505;
+            --bg-secondary: #0A0A0A;
+            --surface: #121212;
+            --primary: #9333EA;
+            --primary-glow: rgba(147, 51, 234, 0.4);
+            --secondary: #4F7CFF;
+            --accent: #D6B45A;
+            --text-main: #F8FAFC;
+            --text-muted: #A1A1AA;
+            --border: rgba(255, 255, 255, 0.1);
+            --border-hover: rgba(255, 255, 255, 0.2);
+            
+            --font-title: 'Space Grotesk', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --container: 1200px;
+        }
 
-:root { --navy:#0F172A; --navy-deep:#080d1b; --panel:#121d35; --crimson:#DC143C; --gold:#D4AF37; --text:#F6F7FB; --muted:#9ba7bc; }
-*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--navy-deep);color:var(--text);font-family:Arial,"Helvetica Neue",sans-serif;overflow-x:hidden} a{color:inherit;text-decoration:none} button{font:inherit} svg{width:1.05em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.section{padding:130px max(6vw,24px)}
-.header{height:86px;padding:0 max(6vw,24px);display:flex;align-items:center;justify-content:space-between;position:absolute;top:0;z-index:20;width:100%;border-bottom:1px solid rgba(255,255,255,.08);background:linear-gradient(180deg,rgba(8,13,27,.7),transparent)}.logo{display:grid;grid-template-columns:42px auto;grid-template-rows:22px 14px;align-items:center}.logo>span{grid-row:1/3;width:34px;height:34px;border:1px solid var(--gold);display:grid;place-items:center;color:var(--gold);font-size:12px;font-weight:800}.logo b{font-size:15px;letter-spacing:.04em}.logo small{font-size:8px;letter-spacing:.35em;color:var(--gold)}nav{display:flex;align-items:center;gap:34px}nav>a{font-size:13px;color:#c2cad8;transition:.2s}nav>a:hover{color:white}.nav-cta{border:1px solid rgba(212,175,55,.48);padding:13px 17px;display:flex;align-items:center;gap:14px;color:white!important}.menu-toggle{display:none;background:none;border:0;color:white;padding:8px}.menu-toggle span{display:block;width:24px;height:1px;background:white;margin:6px}
-.hero{min-height:790px;height:100vh;max-height:980px;padding:160px max(6vw,24px) 78px;display:grid;grid-template-columns:1.02fr .98fr;align-items:center;position:relative;overflow:hidden;background:radial-gradient(circle at 75% 38%,#17274c 0,transparent 34%),linear-gradient(135deg,var(--navy-deep),var(--navy) 55%,#101c35)}.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:58px 58px;mask-image:linear-gradient(to right,transparent,black 65%,transparent)}.hero-glow{position:absolute;border-radius:50%;filter:blur(90px);opacity:.17}.glow-one{width:360px;height:360px;background:var(--crimson);left:-180px;top:25%}.glow-two{width:300px;height:300px;background:#315ed5;right:-110px;bottom:10%}.hero-copy,.hero-visual{position:relative;z-index:2}.availability{color:#bac6d8;font-size:12px;letter-spacing:.14em;text-transform:uppercase;display:flex;align-items:center;gap:10px;margin-bottom:28px}.availability i{width:8px;height:8px;background:#5ad68b;border-radius:50%;box-shadow:0 0 0 5px rgba(90,214,139,.1)}h1,h2,h3,p{margin-top:0}.hero h1{font-size:clamp(54px,6.1vw,92px);line-height:.97;letter-spacing:-.06em;margin-bottom:28px;max-width:800px}.hero h1 em,.section h2 em,.contact h2 em{font-style:normal;color:var(--gold)}.hero-copy>p{font-size:17px;line-height:1.75;color:#aeb9cb;max-width:600px}.hero-actions{display:flex;align-items:center;gap:25px;margin-top:35px}.button{height:54px;display:inline-flex;align-items:center;justify-content:center;gap:32px;padding:0 24px;font-weight:700;font-size:13px;letter-spacing:.02em;transition:transform .2s,background .2s}.button:hover{transform:translateY(-2px)}.button-primary{background:var(--crimson);box-shadow:0 12px 36px rgba(220,20,60,.25)}.button-primary:hover{background:#ee1b49}.button-link{border-bottom:1px solid rgba(212,175,55,.5);padding:0 2px;height:42px;color:#e5e8ee}.hero-stats{display:flex;margin-top:55px;border-top:1px solid rgba(255,255,255,.1);max-width:580px;padding-top:25px;gap:45px}.hero-stats div{display:flex;align-items:center;gap:11px}.hero-stats b{color:var(--gold);font-size:25px}.hero-stats span{font-size:10px;line-height:1.4;text-transform:uppercase;letter-spacing:.1em;color:#8491a6}.hero-visual{height:520px;display:grid;place-items:center}.code-window{width:min(90%,570px);background:rgba(8,13,27,.9);border:1px solid rgba(212,175,55,.35);box-shadow:0 35px 80px rgba(0,0,0,.45);transform:perspective(1100px) rotateY(-6deg) rotateX(2deg);position:relative}.window-bar{height:45px;border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;padding:0 15px;gap:7px}.window-bar span{width:8px;height:8px;border-radius:50%;background:#47536a}.window-bar span:first-child{background:var(--crimson)}.window-bar span:nth-child(2){background:var(--gold)}.window-bar small{margin-left:auto;margin-right:auto;color:#657188;font-size:10px}.code-window pre{font:14px/2.15 Consolas,monospace;padding:42px 48px 52px;margin:0;color:#8e9bb1}.code-gold{color:var(--gold)}.code-blue{color:#77a3ff}.code-red{color:#ff5370}.code-text{color:#9ddeba}.code-status{border-top:1px solid rgba(255,255,255,.07);padding:12px 18px;text-align:right;color:#717f96;font-size:9px;text-transform:uppercase;letter-spacing:.14em}.code-status span{color:#5ad68b}.floating-card{position:absolute;background:#17243f;border:1px solid rgba(255,255,255,.1);box-shadow:0 15px 40px rgba(0,0,0,.35);display:flex;align-items:center;gap:12px;padding:14px 18px;font-size:11px;line-height:1.4;text-transform:uppercase;letter-spacing:.08em}.floating-card span{color:var(--gold);font-size:20px}.card-design{top:45px;right:1%}.card-mobile{bottom:46px;left:0}.card-mobile span{color:var(--crimson)}.gold-orbit,.red-orbit{position:absolute;border-radius:50%;border:1px solid rgba(212,175,55,.24);width:480px;height:480px;z-index:-1}.red-orbit{width:380px;height:380px;border-color:rgba(220,20,60,.22);transform:translate(60px,70px)}.scroll-hint{position:absolute;bottom:28px;left:50%;z-index:3;display:flex;flex-direction:column;align-items:center;gap:10px;color:#637088;font-size:8px;letter-spacing:.35em}.scroll-hint i{width:1px;height:28px;background:linear-gradient(var(--gold),transparent)}
-.eyebrow{display:block;color:var(--gold);font:10px Consolas,monospace;letter-spacing:.16em;margin-bottom:24px}.projects{background:#0d1528}.section-heading{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:70px;gap:40px}.section-heading h2,.about h2,.contact h2{font-size:clamp(40px,4.5vw,68px);line-height:1.06;letter-spacing:-.045em;margin:0}.section-heading>p{max-width:430px;color:var(--muted);line-height:1.8;font-size:15px;margin:0 0 5px}.projects-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:70px 32px;max-width:1440px;margin:auto}.project-card{min-width:0}.project-link{display:block}.project-visual{aspect-ratio:1.62;background:linear-gradient(145deg,#17233a,#0a1020);border:1px solid rgba(255,255,255,.08);padding:9% 8% 0;overflow:hidden;position:relative}.project-visual:before{content:"";position:absolute;width:65%;aspect-ratio:1;border-radius:50%;background:var(--project-accent);filter:blur(85px);opacity:.2;right:-15%;top:-30%}.browser-top{height:32px;background:#eef0f2;border-radius:6px 6px 0 0;display:flex;align-items:center;gap:5px;padding:0 10px;color:#293246;position:relative}.browser-top i{width:6px;height:6px;border-radius:50%;background:#c9cdd3}.browser-top i:first-child{background:#f17878}.browser-top span{margin:auto;font-size:6px;background:#fff;border-radius:3px;width:40%;padding:4px;text-align:center;color:#87909b}.mini-site{height:calc(100% - 32px);background:#f8f6ef;color:#172033;padding:5% 6%;position:relative}.mini-nav{display:flex;justify-content:space-between;font-size:9px;text-transform:uppercase}.mini-nav div{display:flex;gap:8px}.mini-nav i{width:18px;height:2px;background:#a2a6aa}.mini-content{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;height:85%;gap:8%}.mini-copy small{font-size:5px;letter-spacing:.18em;color:var(--project-accent)}.mini-title-line{display:block;width:68%;height:7px;background:#1e2838;margin-top:6px}.mini-title-line.wide{width:95%;margin-top:13px}.mini-text-line{display:block;width:85%;height:2px;background:#a9adb3;margin-top:9px}.mini-text-line.short{width:62%;margin-top:4px}.mini-button{display:inline-block;background:var(--project-accent);color:white;padding:7px 10px;margin-top:12px;font-size:5px;letter-spacing:.1em}.mini-art{height:82%;position:relative;background:linear-gradient(145deg,var(--project-accent),#172033);overflow:hidden}.mini-art span{position:absolute;background:rgba(255,255,255,.14);border-radius:50%}.mini-art span:first-child{width:75%;height:75%;right:-18%;top:-10%}.mini-art span:nth-child(2){width:42%;height:42%;left:-8%;bottom:-5%}.mini-art span:last-child{width:2px;height:90%;border-radius:0;transform:rotate(35deg);left:50%;top:5%}.visual-criminal .mini-site,.visual-law .mini-site{background:#eeeae2}.visual-cakes .mini-site{background:#fff7f4}.visual-dental .mini-site{background:#f2faf9}.visual-furniture .mini-site{background:#f0e8df}.project-info{padding:23px 3px 0}.project-meta{display:flex;align-items:center;gap:13px;margin-bottom:13px}.project-meta span{color:var(--gold);font:10px Consolas,monospace}.project-meta small{text-transform:uppercase;letter-spacing:.13em;color:#6f7c91;font-size:9px}.project-title-row{display:flex;align-items:center;justify-content:space-between}.project-title-row h3{font-size:28px;letter-spacing:-.03em;margin:0}.project-title-row i{width:39px;height:39px;border:1px solid rgba(212,175,55,.35);display:grid;place-items:center;color:var(--gold);font-style:normal;transition:.2s}.project-link:hover .project-title-row i{background:var(--crimson);color:white;border-color:var(--crimson);transform:rotate(5deg)}.project-link:hover .project-visual{border-color:rgba(212,175,55,.4)}.project-info>p{color:#8996aa;font-size:13px;line-height:1.65;max-width:90%;margin:13px 0}.tags{display:flex;flex-wrap:wrap;gap:7px}.tags span{font-size:8px;text-transform:uppercase;letter-spacing:.12em;padding:6px 9px;border:1px solid rgba(255,255,255,.09);color:#7e8a9d}
-.about{display:grid;grid-template-columns:.32fr .68fr;position:relative;overflow:hidden;background:linear-gradient(135deg,#111c33,#0c1427)}.about-label{position:relative;z-index:2}.about-copy{max-width:850px;position:relative;z-index:2}.about-copy .lead{font-size:20px;line-height:1.7;color:#d8dde7;margin:40px 0 18px}.about-copy>p:not(.lead){color:#8f9bb0;line-height:1.8;max-width:700px}.skills{display:flex;flex-wrap:wrap;gap:9px;margin-top:34px}.skills span{padding:10px 13px;border:1px solid rgba(212,175,55,.23);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#b1bbca}.about-mark{position:absolute;font-weight:900;font-size:420px;line-height:.8;letter-spacing:-.1em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.025);right:-10px;bottom:-50px}.process{background:#0a1121}.section-heading.compact{margin-bottom:65px}.steps{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.1)}.steps article{padding:36px 25px 0 0;position:relative}.steps article>span{font:11px Consolas,monospace;color:var(--gold)}.steps article>i{position:absolute;top:-4px;left:0;width:8px;height:8px;border-radius:50%;background:var(--navy-deep);border:1px solid var(--gold)}.steps h3{font-size:20px;margin:28px 0 12px}.steps p{font-size:13px;line-height:1.7;color:#8490a3;max-width:250px}.contact{text-align:center;min-height:650px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle at center,rgba(33,59,112,.52),transparent 45%),#0e1830;position:relative;overflow:hidden}.contact:before,.contact:after{content:"";position:absolute;width:370px;height:370px;border:1px solid rgba(212,175,55,.09);border-radius:50%}.contact:after{width:560px;height:560px;border-color:rgba(220,20,60,.08)}.contact>*{position:relative;z-index:2}.contact>p{max-width:630px;color:#9da9bc;line-height:1.8;margin:28px 0 18px}.contact-details{display:flex;align-items:center;justify-content:center;gap:18px;margin-bottom:24px;color:#c5cddd;font-size:12px}.contact-details span,.contact-details a{display:flex;align-items:center;gap:7px}.contact-details span:before,.contact-details a:before{content:"";width:5px;height:5px;border-radius:50%;background:var(--gold)}.contact-details a{color:white;border-bottom:1px solid rgba(212,175,55,.45)}.contact-button{height:60px;padding:0 30px;margin-bottom:16px}.contact>small{color:#69758a;font-size:9px;text-transform:uppercase;letter-spacing:.13em}footer{padding:46px max(6vw,24px);display:grid;grid-template-columns:1fr 1.3fr 1fr auto;align-items:center;gap:35px;border-top:1px solid rgba(255,255,255,.07);background:#080d1b}footer p{margin:0;color:#788498;font-size:11px;line-height:1.6}footer>div{display:flex;gap:24px}footer>div a{font-size:11px;color:#9ca6b7}footer>small{font-size:9px;color:#555f71}.whatsapp-float{position:fixed;right:22px;bottom:max(22px,env(safe-area-inset-bottom));z-index:40;width:60px;height:60px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:white;box-shadow:0 12px 35px rgba(0,0,0,.4);transition:transform .2s,box-shadow .2s}.whatsapp-float:hover{transform:translateY(-3px);box-shadow:0 16px 42px rgba(37,211,102,.28)}.whatsapp-float svg{width:29px;height:29px;fill:currentColor;stroke:none}
-@media(max-width:980px){.header{height:74px}.menu-toggle{display:block;position:relative;z-index:3}.header nav{display:none;position:absolute;top:74px;left:0;width:100%;padding:25px;flex-direction:column;align-items:stretch;background:#0a1121;border-bottom:1px solid rgba(255,255,255,.1);gap:0}.header nav.open{display:flex}.header nav>a{padding:15px}.nav-cta{margin-top:10px;justify-content:space-between}.hero{height:auto;max-height:none;min-height:0;grid-template-columns:1fr;padding-top:145px;gap:35px}.hero h1{font-size:clamp(48px,10vw,74px)}.hero-visual{height:380px}.code-window{width:min(88%,560px)}.floating-card{font-size:9px}.card-design{right:0}.hero-stats{margin-top:40px}.scroll-hint{display:none}.section{padding:95px 5vw}.section-heading{align-items:flex-start}.projects-grid{gap:55px 24px}.about{grid-template-columns:1fr}.about-label{margin-bottom:20px}.steps{grid-template-columns:repeat(2,1fr);gap:35px 0}footer{grid-template-columns:1fr 1fr}footer>small{text-align:right}}
-@media(max-width:680px){.section{padding:78px 20px}.header{padding:0 20px}.hero{min-height:0;padding:125px 20px 72px}.hero h1{font-size:48px;line-height:1.02}.hero-copy>p{font-size:15px}.hero-actions{align-items:stretch;flex-direction:column;gap:8px}.button-link{justify-content:flex-start;width:max-content}.hero-stats{gap:14px;justify-content:space-between}.hero-stats div{display:block}.hero-stats b{display:block;font-size:20px;margin-bottom:4px}.hero-stats span{font-size:8px}.hero-visual{height:300px}.code-window{width:94%;transform:none}.code-window pre{padding:28px 22px 34px;font-size:11px}.floating-card{padding:10px;letter-spacing:.04em}.card-design{top:0}.card-mobile{bottom:-5px}.gold-orbit{width:320px;height:320px}.red-orbit{width:250px;height:250px}.section-heading{display:block;margin-bottom:42px}.section-heading h2,.about h2,.contact h2{font-size:38px}.section-heading>p{margin-top:22px}.projects-grid{grid-template-columns:1fr;gap:50px}.project-visual{padding:8% 5% 0}.project-title-row h3{font-size:24px}.project-info>p{max-width:100%}.about-copy .lead{font-size:17px;margin-top:28px}.about-mark{font-size:230px}.steps{grid-template-columns:1fr;border:0;gap:0}.steps article{border-top:1px solid rgba(255,255,255,.1);padding:28px 0}.steps article>i{display:none}.steps h3{margin:13px 0 8px}.steps p{max-width:none;margin-bottom:0}.contact{min-height:570px;padding-left:20px;padding-right:20px}.contact:after{width:390px;height:390px}.contact>p{font-size:14px}.contact-details{flex-direction:column;gap:9px;margin-bottom:22px}.contact-button{width:100%;gap:16px}footer{grid-template-columns:1fr;padding:40px 20px}footer>small{text-align:left}.whatsapp-float{width:56px;height:56px;right:16px;bottom:max(16px,env(safe-area-inset-bottom))}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  </style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Progress bar */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            width: 0%;
+            z-index: 9999;
+            transition: width 0.1s;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-title);
+            line-height: 1.2;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+        
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--text-main), var(--text-muted));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        section {
+            padding: 100px 0;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 1px solid transparent;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), #3b5bdb);
+            color: #fff;
+            box-shadow: 0 4px 15px var(--primary-glow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px var(--primary-glow);
+            filter: brightness(1.1);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+            color: var(--text-main);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: var(--transition);
+            border-bottom: 1px solid transparent;
+        }
+
+        header.scrolled {
+            background: rgba(7, 11, 20, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 15px 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-title);
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+        .logo span:last-child {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            color: var(--secondary);
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-top: 4px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-links a.nav-item {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            position: relative;
+        }
+        
+        .nav-links a.nav-item:hover, .nav-links a.nav-item.active {
+            color: var(--text-main);
+        }
+        
+        .nav-links a.nav-item::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--secondary);
+            transition: var(--transition);
+        }
+        
+        .nav-links a.nav-item:hover::after, .nav-links a.nav-item.active::after {
+            width: 100%;
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-main);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Ambient Background */
+        .ambient-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+            pointer-events: none;
+        }
+        
+        .ambient-glow {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.3;
+        }
+        
+        .glow-1 {
+            top: -10%;
+            left: -10%;
+            width: 50vw;
+            height: 50vw;
+            background: var(--primary);
+        }
+        
+        .glow-2 {
+            top: 40%;
+            right: -10%;
+            width: 40vw;
+            height: 40vw;
+            background: var(--secondary);
+            opacity: 0.2;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background: rgba(34, 211, 238, 0.05);
+            border: 1px solid rgba(34, 211, 238, 0.2);
+            border-radius: 20px;
+            color: var(--secondary);
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 24px;
+        }
+        
+        .hero-badge::before {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 8px;
+            background: var(--secondary);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--secondary);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(34, 211, 238, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(34, 211, 238, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(34, 211, 238, 0); }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.8rem, 5vw, 4.5rem);
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, #fff 30%, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: clamp(1.1rem, 2vw, 1.25rem);
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            max-width: 680px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .hero-trust {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 48px;
+        }
+
+        .hero-trust svg {
+            color: var(--accent);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 32px;
+            border-top: 1px solid var(--border);
+            padding-top: 32px;
+        }
+        
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        
+        .stat-value {
+            font-family: var(--font-title);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .stat-value svg {
+            color: var(--secondary);
+        }
+        
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+        }
+
+        .project-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(79, 124, 255, 0.5);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(79, 124, 255, 0.1);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 240px;
+            background: var(--bg-secondary);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-size: cover;
+            background-position: top center;
+        }
+        
+        .project-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, var(--surface), transparent);
+            opacity: 0.9;
+        }
+
+        /* Project Backgrounds */
+        .img-agro { background-image: url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=800&q=80'); }
+        .img-law { background-image: url('https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80'); }
+        .img-cake { background-image: url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80'); }
+        .img-law2 { background-image: url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=800&q=80'); }
+        .img-odonto { background-image: url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80'); }
+        .img-furniture { background-image: url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80'); }
+        .img-coffee { background-image: url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80'); }
+
+        .project-content {
+            padding: 24px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            z-index: 2;
+        }
+        
+        .project-niche {
+            font-size: 0.75rem;
+            color: var(--secondary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .project-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+        }
+
+        .project-content p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 24px;
+            flex-grow: 1;
+        }
+        
+        .project-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+        }
+        
+        .project-tags span {
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 4px;
+            color: var(--text-muted);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        
+        .project-link svg {
+            transition: transform 0.2s;
+        }
+        
+        .project-link:hover svg {
+            transform: translateX(4px) translateY(-4px);
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .service-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 40px 32px;
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            border-color: rgba(34, 211, 238, 0.3);
+            transform: translateY(-5px);
+            background: linear-gradient(180deg, var(--surface) 0%, rgba(34, 211, 238, 0.03) 100%);
+        }
+
+        .service-icon {
+            width: 56px;
+            height: 56px;
+            background: rgba(34, 211, 238, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            color: var(--secondary);
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* About & Differentials */
+        .about-section {
+            background: var(--bg-secondary);
+            border-radius: 24px;
+            padding: 64px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .about-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 24px;
+        }
+        
+        .about-content p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+        }
+        
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        
+        .skill-tag {
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--text-main);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .skill-tag:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            background: rgba(79, 124, 255, 0.05);
+        }
+
+        .diff-container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .diff-container h3 {
+            font-size: 1.5rem;
+            margin-bottom: 32px;
+            color: var(--text-main);
+        }
+        
+        .diff-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .diff-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+        
+        .diff-icon {
+            color: var(--accent);
+            flex-shrink: 0;
+            background: rgba(214, 180, 90, 0.1);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        
+        .diff-text h4 {
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+        
+        .diff-text p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Process */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            position: relative;
+        }
+        
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 28px;
+            left: 50px;
+            right: 50px;
+            height: 1px;
+            background: var(--border);
+            z-index: 1;
+        }
+        
+        .step {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .step-number {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-title);
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 24px;
+            color: var(--text-muted);
+            transition: var(--transition);
+        }
+        
+        .step:hover .step-number {
+            background: var(--primary);
+            color: #fff;
+            border-color: var(--primary);
+            box-shadow: 0 0 20px var(--primary-glow);
+        }
+        
+        .step h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+        }
+        
+        .step p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--surface) 0%, rgba(79, 124, 255, 0.1) 100%);
+            border-radius: 24px;
+            padding: 80px 40px;
+            text-align: center;
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 60px;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(79, 124, 255, 0.15) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .cta-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta-content p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+        }
+        
+        .cta-info {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 60px 0 30px;
+            background: var(--bg-secondary);
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            max-width: 300px;
+        }
+        
+        .footer-brand .logo {
+            font-size: 1.2rem;
+        }
+        
+        .footer-brand p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 60px;
+        }
+
+        .link-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .link-group h4 {
+            color: var(--text-main);
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+        
+        .link-group a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        
+        .link-group a:hover {
+            color: var(--primary);
+        }
+        
+        .footer-bottom {
+            margin-top: 60px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* Animations & Interactions */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition);
+            z-index: 99;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0);
+        }
+        
+        .back-to-top:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+        
+        /* Cursor Glow */
+        .cursor-glow {
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(147, 51, 234, 0.05) 0%, transparent 60%);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            z-index: 9999;
+            transition: background 0.3s;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--surface); 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--text-muted); 
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .about-section {
+                grid-template-columns: 1fr;
+                padding: 40px;
+            }
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+            .process-steps::before {
+                display: none;
+            }
+            .footer-links {
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            section { padding: 60px 0; }
+
+            .about-section {
+                padding: 32px 24px;
+                gap: 40px;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: rgba(17, 28, 48, 0.98);
+                backdrop-filter: blur(10px);
+                flex-direction: column;
+                padding: 32px 24px;
+                gap: 24px;
+                border-bottom: 1px solid var(--border);
+                transform: translateY(-150%);
+                transition: transform 0.4s ease;
+                z-index: 999;
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+            }
+            
+            .mobile-toggle {
+                display: block;
+            }
+            
+            .nav-links .btn {
+                width: 100%;
+                margin-top: 16px;
+            }
+            
+            .hero {
+                text-align: center;
+                padding-top: 140px;
+            }
+            
+            .hero-badge {
+                margin: 0 auto 24px;
+            }
+            
+            .hero p {
+                margin: 0 auto 32px;
+            }
+            
+            .hero-actions {
+                flex-direction: column;
+                justify-content: center;
+                gap: 16px;
+            }
+            
+            .hero-stats {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            .projects-grid, .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-steps {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            
+            .step {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .cta-section {
+                padding: 56px 24px;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+            }
+            
+            .footer-links {
+                flex-wrap: wrap;
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                gap: 16px;
+            }
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
 </head>
 <body>
-<main><header class="header"><a class="logo" href="#inicio" aria-label="Ícaro Furtado Desenvolvedor — início"><span>ÍF</span><b>Ícaro Furtado</b><small>DESENVOLVEDOR</small></a><button class="menu-toggle" aria-expanded="false" aria-label="Abrir menu"><span></span><span></span></button><nav class="" aria-label="Navegação principal"><a href="#projetos">Projetos</a><a href="#sobre">Sobre</a><a href="#processo">Processo</a><a class="nav-cta" href="#contato">Vamos conversar <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg></a></nav></header><section class="hero" id="inicio"><div class="hero-glow glow-one"></div><div class="hero-glow glow-two"></div><div class="hero-grid"></div><div class="hero-copy"><div class="availability"><i></i> Desenvolvedor web em Salvador, Bahia • disponível para novos projetos</div><h1>Seu negócio merece<br/>um site que <em>marca.</em></h1><p>Desenvolvo sites modernos, estratégicos e responsivos que apresentam sua marca com profissionalismo, conquistam confiança e transformam visitas em oportunidades reais.</p><div class="hero-actions"><a class="button button-primary" href="#projetos">Ver projetos <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg></a><a class="button button-link" href="#contato">Começar um projeto <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"></path></svg></a></div><div class="hero-stats"><div><b>06</b><span>projetos<br/>selecionados</span></div><div><b>100%</b><span>adaptados<br/>para mobile</span></div><div><b>01</b><span>objetivo: fazer<br/>sua marca crescer</span></div></div></div><div class="hero-visual"><div class="code-window" aria-hidden="true"><div class="window-bar"><span></span><span></span><span></span><small>portfolio.tsx</small></div><pre><code><span class="code-gold">const</span> projeto = {
-  <span class="code-blue">estratégia</span>: <span class="code-red">true</span>,
-  <span class="code-blue">design</span>: <span class="code-text">&quot;com propósito&quot;</span>,
-  <span class="code-blue">resultado</span>: <span class="code-text">&quot;presença digital&quot;</span>
-};</code></pre><div class="code-status"><span>●</span> pronto para publicar</div></div><div class="floating-card card-design"><span>✦</span><b>Design com<br/>identidade</b></div><div class="floating-card card-mobile"><span>↗</span><b>Mobile<br/>first</b></div><div class="gold-orbit"></div><div class="red-orbit"></div></div><a class="scroll-hint" href="#projetos"><span>SCROLL</span><i></i></a></section><section class="projects section" id="projetos"><div class="section-heading"><div><span class="eyebrow">// TRABALHOS SELECIONADOS</span><h2>Projetos que unem<br/><em>forma e resultado.</em></h2></div><p>Cada projeto nasce de um objetivo diferente. O ponto em comum é uma experiência clara, bonita e pronta para funcionar em qualquer tela.</p></div><div class="projects-grid"><article class="project-card"><a href="https://site-agro-projeto.vercel.app/" target="_blank" rel="noreferrer" class="project-link" aria-label="Abrir projeto Sertão Agro"><div class="project-visual visual-agro" style="--project-accent:#9CB449"><div class="browser-top"><i></i><i></i><i></i><span>www.seusite.com.br</span></div><div class="mini-site"><div class="mini-nav"><b>Sertão</b><div><i></i><i></i><i></i></div></div><div class="mini-content"><div class="mini-copy"><small>EXPERIÊNCIA DIGITAL</small><span class="mini-title-line wide"></span><span class="mini-title-line"></span><span class="mini-text-line"></span><span class="mini-text-line short"></span><b class="mini-button">SAIBA MAIS</b></div><div class="mini-art"><span></span><span></span><span></span></div></div></div></div><div class="project-info"><div class="project-meta"><span>01</span><small>Agronegócio</small></div><div class="project-title-row"><h3>Sertão Agro</h3><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"></path></svg></i></div><p>Site institucional com presença forte, linguagem regional e jornada pensada para aproximar a empresa do produtor rural.</p><div class="tags"><span>Institucional</span><span>Conversão</span><span>Responsivo</span></div></div></a></article><article class="project-card"><a href="https://site-advocacia-criminal-projeto.vercel.app/" target="_blank" rel="noreferrer" class="project-link" aria-label="Abrir projeto Advocacia Criminal"><div class="project-visual visual-criminal" style="--project-accent:#B59A67"><div class="browser-top"><i></i><i></i><i></i><span>www.seusite.com.br</span></div><div class="mini-site"><div class="mini-nav"><b>Advocacia</b><div><i></i><i></i><i></i></div></div><div class="mini-content"><div class="mini-copy"><small>EXPERIÊNCIA DIGITAL</small><span class="mini-title-line wide"></span><span class="mini-title-line"></span><span class="mini-text-line"></span><span class="mini-text-line short"></span><b class="mini-button">SAIBA MAIS</b></div><div class="mini-art"><span></span><span></span><span></span></div></div></div></div><div class="project-info"><div class="project-meta"><span>02</span><small>Serviços jurídicos</small></div><div class="project-title-row"><h3>Advocacia Criminal</h3><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"></path></svg></i></div><p>Experiência sóbria e objetiva para transmitir autoridade, discrição e facilitar o primeiro contato em situações delicadas.</p><div class="tags"><span>Landing page</span><span>Autoridade</span><span>Mobile first</span></div></div></a></article><article class="project-card"><a href="https://landing-page-atelie-bolos.vercel.app/" target="_blank" rel="noreferrer" class="project-link" aria-label="Abrir projeto Ateliê de Bolos"><div class="project-visual visual-cakes" style="--project-accent:#E8A5A5"><div class="browser-top"><i></i><i></i><i></i><span>www.seusite.com.br</span></div><div class="mini-site"><div class="mini-nav"><b>Ateliê</b><div><i></i><i></i><i></i></div></div><div class="mini-content"><div class="mini-copy"><small>EXPERIÊNCIA DIGITAL</small><span class="mini-title-line wide"></span><span class="mini-title-line"></span><span class="mini-text-line"></span><span class="mini-text-line short"></span><b class="mini-button">SAIBA MAIS</b></div><div class="mini-art"><span></span><span></span><span></span></div></div></div></div><div class="project-info"><div class="project-meta"><span>03</span><small>Gastronomia artesanal</small></div><div class="project-title-row"><h3>Ateliê de Bolos</h3><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"></path></svg></i></div><p>Landing page acolhedora e visual para valorizar o trabalho artesanal, despertar desejo e conduzir pedidos pelo celular.</p><div class="tags"><span>Catálogo</span><span>Storytelling</span><span>WhatsApp</span></div></div></a></article><article class="project-card"><a href="https://site-escrit-rio-advocacia.vercel.app/" target="_blank" rel="noreferrer" class="project-link" aria-label="Abrir projeto Escritório de Advocacia"><div class="project-visual visual-law" style="--project-accent:#6D8EAB"><div class="browser-top"><i></i><i></i><i></i><span>www.seusite.com.br</span></div><div class="mini-site"><div class="mini-nav"><b>Escritório</b><div><i></i><i></i><i></i></div></div><div class="mini-content"><div class="mini-copy"><small>EXPERIÊNCIA DIGITAL</small><span class="mini-title-line wide"></span><span class="mini-title-line"></span><span class="mini-text-line"></span><span class="mini-text-line short"></span><b class="mini-button">SAIBA MAIS</b></div><div class="mini-art"><span></span><span></span><span></span></div></div></div></div><div class="project-info"><div class="project-meta"><span>04</span><small>Site institucional</small></div><div class="project-title-row"><h3>Escritório de Advocacia</h3><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"></path></svg></i></div><p>Projeto corporativo com arquitetura clara, estética refinada e conteúdo orientado à confiança e ao atendimento jurídico.</p><div class="tags"><span>Corporativo</span><span>Credibilidade</span><span>UX</span></div></div></a></article><article class="project-card"><a href="https://site-clinica-odonto-gray.vercel.app/" target="_blank" rel="noreferrer" class="project-link" aria-label="Abrir projeto Clínica Odontológica"><div class="project-visual visual-dental" style="--project-accent:#70B7B1"><div class="browser-top"><i></i><i></i><i></i><span>www.seusite.com.br</span></div><div class="mini-site"><div class="mini-nav"><b>Clínica</b><div><i></i><i></i><i></i></div></div><div class="mini-content"><div class="mini-copy"><small>EXPERIÊNCIA DIGITAL</small><span class="mini-title-line wide"></span><span class="mini-title-line"></span><span class="mini-text-line"></span><span class="mini-text-line short"></span><b class="mini-button">SAIBA MAIS</b></div><div class="mini-art"><span></span><span></span><span></span></div></div></div></div><div class="project-info"><div class="project-meta"><span>05</span><small>Saúde e bem-estar</small></div><div class="project-title-row"><h3>Clínica Odontológica</h3><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"></path></svg></i></div><p>Interface limpa e acolhedora que equilibra tecnologia, cuidado e confiança para transformar visitas em agendamentos.</p><div class="tags"><span>Premium</span><span>Conversão</span><span>Acessível</span></div></div></a></article><article class="project-card"><a href="https://site-moveis-planejados.vercel.app/" target="_blank" rel="noreferrer" class="project-link" aria-label="Abrir projeto Móveis Planejados"><div class="project-visual visual-furniture" style="--project-accent:#C08A58"><div class="browser-top"><i></i><i></i><i></i><span>www.seusite.com.br</span></div><div class="mini-site"><div class="mini-nav"><b>Móveis</b><div><i></i><i></i><i></i></div></div><div class="mini-content"><div class="mini-copy"><small>EXPERIÊNCIA DIGITAL</small><span class="mini-title-line wide"></span><span class="mini-title-line"></span><span class="mini-text-line"></span><span class="mini-text-line short"></span><b class="mini-button">SAIBA MAIS</b></div><div class="mini-art"><span></span><span></span><span></span></div></div></div></div><div class="project-info"><div class="project-meta"><span>06</span><small>Arquitetura e interiores</small></div><div class="project-title-row"><h3>Móveis Planejados</h3><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"></path></svg></i></div><p>Vitrine digital sofisticada para apresentar ambientes sob medida, destacar acabamento e gerar pedidos de orçamento.</p><div class="tags"><span>Portfólio</span><span>Alto padrão</span><span>Responsivo</span></div></div></a></article></div></section><section class="about section" id="sobre"><div class="about-mark" aria-hidden="true">IF</div><div class="about-label"><span class="eyebrow">// SOBRE MIM</span></div><div class="about-copy"><h2>Mais que páginas bonitas.<br/><em>Sites que trabalham por você.</em></h2><p class="lead">Sou Ícaro Furtado, desenvolvedor web de Salvador, Bahia. Transformo ideias e negócios em sites profissionais, claros e marcantes — feitos para valorizar cada marca, transmitir confiança e gerar novas oportunidades.</p><p>Cuido da estrutura, do visual, da experiência no celular e de cada detalhe da mensagem. Você recebe uma presença digital coerente com a sua marca — sem complicação e pronta para ser apresentada ao mundo.</p><div class="skills"><span>HTML &amp; CSS</span><span>JavaScript</span><span>UI/UX Design</span><span>Sites responsivos</span><span>Landing pages</span><span>Performance</span></div></div></section><section class="process section" id="processo"><div class="section-heading compact"><div><span class="eyebrow">// COMO FUNCIONA</span><h2>Do primeiro contato<br/>ao site <em>no ar.</em></h2></div><p>Um processo direto, colaborativo e sem linguagem complicada.</p></div><div class="steps"><article><span>01</span><i></i><h3>Entendimento</h3><p>Conversamos sobre seu negócio, seu público e o resultado que o site precisa gerar.</p></article><article><span>02</span><i></i><h3>Direção</h3><p>Defino a estrutura, o conteúdo e a identidade visual mais adequada para a sua marca.</p></article><article><span>03</span><i></i><h3>Criação</h3><p>Desenvolvo o site com atenção ao design, à navegação e ao desempenho no celular.</p></article><article><span>04</span><i></i><h3>Publicação</h3><p>Revisamos os detalhes e deixo tudo pronto para sua marca ganhar presença online.</p></article></div></section><section class="contact section" id="contato"><div class="contact-glow"></div><span class="eyebrow">// VAMOS CRIAR ALGO JUNTOS?</span><h2>Seu próximo site<br/>pode começar <em>agora.</em></h2><p>Conte um pouco sobre sua ideia. Vamos transformar seu projeto em um site profissional, rápido e pensado para fazer sua marca ser lembrada.</p><div class="contact-details"><span>Salvador, Bahia</span><a href="tel:+5571999132008">(71) 99913-2008</a></div><a class="button button-primary contact-button" aria-label="Conversar com Ícaro pelo WhatsApp" href="https://wa.me/5571999132008?text=Ol%C3%A1%2C%20%C3%8Dcaro!%20Vi%20seu%20portf%C3%B3lio%20e%20quero%20conversar%20sobre%20um%20site." target="_blank" rel="noreferrer">Falar sobre meu projeto <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"></path></svg></a><small>Resposta direta • Conversa sem compromisso</small></section><footer><a class="logo" href="#inicio"><span>ÍF</span><b>Ícaro Furtado</b><small>DESENVOLVEDOR</small></a><p>Design estratégico. Código bem construído.<br/>Sites profissionais em Salvador, Bahia.</p><div><a href="#projetos">Projetos</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a></div><small>© 2026 Ícaro Furtado Desenvolvedor</small></footer></main><a class="whatsapp-float" href="https://wa.me/5571999132008?text=Ol%C3%A1%2C%20%C3%8Dcaro!%20Vi%20seu%20portf%C3%B3lio%20e%20quero%20conversar%20sobre%20um%20site." target="_blank" rel="noreferrer" aria-label="Conversar com Ícaro pelo WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3a12.8 12.8 0 0 0-11 19.4L3.5 28l5.8-1.5A12.9 12.9 0 1 0 16 3Zm0 23.3a10.6 10.6 0 0 1-5.4-1.5l-.4-.2-3.4.9.9-3.3-.2-.4A10.6 10.6 0 1 1 16 26.3Zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1a8.6 8.6 0 0 1-2.6-1.6 9.6 9.6 0 0 1-1.8-2.2c-.2-.3 0-.5.1-.6l.5-.6.3-.5c.1-.2.1-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 3s1.3 3.5 1.5 3.7c.2.2 2.6 4 6.4 5.6.9.4 1.6.6 2.1.8.9.3 1.7.2 2.4.1.7-.1 1.9-.8 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.4Z"/></svg></a>
-<script>
-(function(){
-  const button=document.querySelector('.menu-toggle');
-  const nav=document.querySelector('.header nav');
-  if(button&&nav){
-    button.addEventListener('click',function(){
-      const isOpen=nav.classList.toggle('open');
-      button.setAttribute('aria-expanded',String(isOpen));
-    });
-    nav.querySelectorAll('a').forEach(function(link){
-      link.addEventListener('click',function(){
-        nav.classList.remove('open');
-        button.setAttribute('aria-expanded','false');
-      });
-    });
-    window.addEventListener('resize',function(){
-      nav.classList.remove('open');
-      button.setAttribute('aria-expanded','false');
-    });
-  }
-})();
-</script>
+
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Ambient background glows -->
+    <div class="ambient-bg">
+        <div class="ambient-glow glow-1"></div>
+        <div class="ambient-glow glow-2"></div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span>Ícaro Furtado</span>
+                <span>Desenvolvedor Web</span>
+            </a>
+            
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#inicio" class="nav-item active">Início</a>
+                <a href="#projetos" class="nav-item">Projetos</a>
+                <a href="#servicos" class="nav-item">Serviços</a>
+                <a href="#sobre" class="nav-item">Sobre</a>
+                <a href="#processo" class="nav-item">Processo</a>
+                <a href="https://wa.me/5571999132008?text=Olá%2C%20Ícaro!%20Vi%20seu%20portfólio%20e%20quero%20conversar%20sobre%20um%20projeto." target="_blank" class="btn btn-primary">
+                    Solicitar um projeto
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero">
+            <div class="container">
+                <div class="hero-content reveal">
+                    <div class="hero-badge">
+                        Desenvolvedor web em Salvador–BA
+                    </div>
+                    <h1>Sites que transformam ideias em presença digital.</h1>
+                    <p>Desenvolvo landing pages e sites institucionais modernos, responsivos e estratégicos para marcas que querem transmitir confiança e gerar novas oportunidades.</p>
+                    
+                    <div class="hero-actions">
+                        <a href="#projetos" class="btn btn-primary">
+                            Conhecer projetos
+                        </a>
+                        <a href="https://wa.me/5571999132008?text=Olá%2C%20Ícaro!%20Vi%20seu%20portfólio%20e%20quero%20conversar%20sobre%20um%20site." target="_blank" class="btn btn-secondary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                            Falar pelo WhatsApp
+                        </a>
+                    </div>
+
+                    <div class="hero-trust">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                        Resposta rápida • Atendimento direto e sem intermediários
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                                100%
+                            </span>
+                            <span class="stat-label">Responsividade Mobile</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                +90
+                            </span>
+                            <span class="stat-label">Carregamento Ultrarrápido</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                                Otimizado
+                            </span>
+                            <span class="stat-label">Foco em Conversão</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projetos -->
+        <section id="projetos">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Projetos desenvolvidos para diferentes objetivos.</h2>
+                    <p>Confira alguns dos trabalhos recentes focados em usabilidade, performance e resultados reais.</p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Projeto 1 -->
+                    <article class="project-card reveal">
+                        <div class="project-image img-agro"></div>
+                        <div class="project-content">
+                            <span class="project-niche">Agronegócio</span>
+                            <h3>Site Institucional Agro</h3>
+                            <p>Apresentação completa para empresa do setor agrícola com foco em sustentabilidade e alcance de novos parceiros.</p>
+                            <div class="project-tags">
+                                <span>HTML/CSS/JS</span>
+                                <span>UI Design</span>
+                                <span>Responsivo</span>
+                            </div>
+                            <a href="https://site-agro-projeto.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">
+                                Ver projeto ao vivo
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 2 -->
+                    <article class="project-card reveal">
+                        <div class="project-image img-law"></div>
+                        <div class="project-content">
+                            <span class="project-niche">Advocacia</span>
+                            <h3>Landing Page Criminalista</h3>
+                            <p>Página de alta conversão para advogado criminalista, projetada para transmitir autoridade e facilitar o contato rápido de urgência.</p>
+                            <div class="project-tags">
+                                <span>Conversão</span>
+                                <span>Design Dark</span>
+                                <span>Performance</span>
+                            </div>
+                            <a href="https://site-advocacia-criminal-projeto.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">
+                                Ver projeto ao vivo
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 3 -->
+                    <article class="project-card reveal">
+                        <div class="project-image img-cake"></div>
+                        <div class="project-content">
+                            <span class="project-niche">Confeitaria</span>
+                            <h3>Ateliê de Bolos</h3>
+                            <p>Vitrine digital atraente para encomendas de bolos artesanais, focada em imagens de qualidade e facilidade no pedido via WhatsApp.</p>
+                            <div class="project-tags">
+                                <span>Landing Page</span>
+                                <span>Clean</span>
+                                <span>Mobile First</span>
+                            </div>
+                            <a href="https://landing-page-atelie-bolos.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">
+                                Ver projeto ao vivo
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 4 -->
+                    <article class="project-card reveal">
+                        <div class="project-image img-law2"></div>
+                        <div class="project-content">
+                            <span class="project-niche">Advocacia</span>
+                            <h3>Escritório de Advocacia</h3>
+                            <p>Site institucional completo detalhando áreas de atuação, equipe e artigos, transmitindo confiança e tradição.</p>
+                            <div class="project-tags">
+                                <span>Institucional</span>
+                                <span>UI/UX</span>
+                                <span>Acessibilidade</span>
+                            </div>
+                            <a href="https://site-escrit-rio-advocacia.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">
+                                Ver projeto ao vivo
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 5 -->
+                    <article class="project-card reveal">
+                        <div class="project-image img-odonto"></div>
+                        <div class="project-content">
+                            <span class="project-niche">Saúde</span>
+                            <h3>Clínica Odontológica</h3>
+                            <p>Página moderna e limpa para captação de pacientes de implantes e estética dental, com forte apelo em CTAs e provas sociais.</p>
+                            <div class="project-tags">
+                                <span>Clínica</span>
+                                <span>Captação</span>
+                                <span>Leads</span>
+                            </div>
+                            <a href="https://site-clinica-odonto-gray.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">
+                                Ver projeto ao vivo
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 6 -->
+                    <article class="project-card reveal">
+                        <div class="project-image img-furniture"></div>
+                        <div class="project-content">
+                            <span class="project-niche">Arquitetura / Decoração</span>
+                            <h3>Móveis Planejados</h3>
+                            <p>Catálogo visual focado em sofisticação e qualidade de materiais para empresa de móveis sob medida de alto padrão.</p>
+                            <div class="project-tags">
+                                <span>Portfolio</span>
+                                <span>Animações</span>
+                                <span>Elegante</span>
+                            </div>
+                            <a href="https://site-moveis-planejados.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">
+                                Ver projeto ao vivo
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 7 -->
+                    <article class="project-card reveal">
+                        <div class="project-image img-coffee"></div>
+                        <div class="project-content">
+                            <span class="project-niche">Gastronomia / Cafeteria</span>
+                            <h3>Cafeteria & Bistrô</h3>
+                            <p>Site com cardápio digital, experiência acolhedora e visual sofisticado para atração de clientes locais e amantes de café.</p>
+                            <div class="project-tags">
+                                <span>Gastronomia</span>
+                                <span>Cardápio Digital</span>
+                                <span>Design Warm</span>
+                            </div>
+                            <a href="https://site-cafeteria-projeto.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">
+                                Ver projeto ao vivo
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Serviços -->
+        <section id="servicos">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Como posso ajudar o seu negócio</h2>
+                    <p>Soluções sob medida para aumentar sua visibilidade, credibilidade e vendas através da internet.</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card reveal">
+                        <div class="service-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                        </div>
+                        <h3>Landing pages</h3>
+                        <p>Páginas de alta conversão focadas em apresentar uma oferta específica, produto ou serviço, preparadas para gerar contatos através de tráfego pago.</p>
+                    </div>
+
+                    <div class="service-card reveal">
+                        <div class="service-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                        </div>
+                        <h3>Sites institucionais</h3>
+                        <p>Plataformas digitais completas e modernas para apresentar sua empresa, detalhar seus serviços e consolidar os diferenciais da sua marca.</p>
+                    </div>
+
+                    <div class="service-card reveal">
+                        <div class="service-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                        </div>
+                        <h3>Revisão e otimização</h3>
+                        <p>Melhorias cirúrgicas em layout, responsividade, clareza visual, experiência mobile, botões de chamada (CTAs) e desempenho do seu site atual.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre & Diferenciais -->
+        <section id="sobre">
+            <div class="container">
+                <div class="about-section reveal">
+                    <div class="about-content">
+                        <h2>Prazer, Ícaro.</h2>
+                        <p>Sou Ícaro Furtado, desenvolvedor web de Salvador–BA. Crio sites que unem design, clareza e estratégia para ajudar negócios a se apresentarem melhor, conquistarem confiança e transformarem visitas em oportunidades reais.</p>
+                        <p>Meu foco é entregar projetos com acabamento visual impecável e código limpo, sempre colocando a experiência do seu cliente em primeiro lugar.</p>
+                        
+                        <div class="skills-container">
+                            <div class="skill-tag">HTML5 & CSS3</div>
+                            <div class="skill-tag">JavaScript</div>
+                            <div class="skill-tag">UI/UX Design</div>
+                            <div class="skill-tag">Landing Pages</div>
+                            <div class="skill-tag">Sites Responsivos</div>
+                            <div class="skill-tag">Otimização Mobile</div>
+                            <div class="skill-tag">Performance Web</div>
+                        </div>
+                    </div>
+                    
+                    <div class="diff-container">
+                        <h3>Por que trabalhar comigo?</h3>
+                        <div class="diff-list">
+                            <div class="diff-item">
+                                <div class="diff-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                                </div>
+                                <div class="diff-text">
+                                    <h4>Foco na Conversão</h4>
+                                    <p>Estrutura pensada para guiar o usuário até o contato ou venda, com botões funcionando perfeitamente.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="diff-item">
+                                <div class="diff-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                                </div>
+                                <div class="diff-text">
+                                    <h4>Experiência Mobile First</h4>
+                                    <p>Design projetado primeiramente para celulares, onde a maioria dos seus clientes está acessando.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="diff-item">
+                                <div class="diff-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+                                </div>
+                                <div class="diff-text">
+                                    <h4>Comunicação Clara</h4>
+                                    <p>Transparência total durante o projeto, suporte na publicação e garantia de qualidade na entrega.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Processo -->
+        <section id="processo">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Como funciona o processo</h2>
+                    <p>Um fluxo de trabalho organizado e transparente, do primeiro contato ao site no ar.</p>
+                </div>
+
+                <div class="process-steps reveal">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Briefing</h3>
+                        <p>Reunião ou formulário para entendimento profundo do seu negócio, público-alvo, referências e objetivos centrais.</p>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Estratégia</h3>
+                        <p>Definição da estrutura de conteúdo (arquitetura da informação), organização das páginas e direção visual.</p>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Desenvolvimento</h3>
+                        <p>Criação do site aliando design premium e código limpo, com revisões e testes de responsividade em diferentes telas.</p>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>Publicação</h3>
+                        <p>Revisão final de performance e acessibilidade, testes de botões/links e preparação para colocar o seu site no ar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA -->
+        <section class="container">
+            <div class="cta-section reveal">
+                <div class="cta-content">
+                    <h2>Vamos transformar sua ideia em um site profissional?</h2>
+                    <p>Conte um pouco sobre o seu projeto e receba um atendimento direto, transparente e com uma proposta personalizada para o seu momento.</p>
+                    
+                    <a href="https://wa.me/5571999132008?text=Olá%2C%20Ícaro!%20Vi%20seu%20portfólio%20e%20quero%20conversar%20sobre%20um%20site." target="_blank" class="btn btn-primary" style="padding: 16px 36px; font-size: 1.1rem;">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                        Falar comigo pelo WhatsApp
+                    </a>
+                    
+                    <div class="cta-info">
+                        <div class="info-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            Salvador–BA
+                        </div>
+                        <div class="info-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            (71) 99913-2008
+                        </div>
+                        <div class="info-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            icarofurtado2008@gmail.com
+                        </div>
+                    </div>
+                    <p style="font-size: 0.9rem; margin-top: 24px; color: var(--accent);">
+                        ✨ Atendimento direto • Proposta personalizada
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span>Ícaro Furtado</span>
+                        <span style="font-size: 0.75rem; color: var(--secondary); font-family: var(--font-body); letter-spacing: 1px;">Desenvolvedor Web</span>
+                    </div>
+                    <p>Sites que unem design premium, tecnologia moderna e estratégia para ajudar negócios a crescerem na internet.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Navegação</h4>
+                        <a href="#inicio">Início</a>
+                        <a href="#projetos">Projetos</a>
+                        <a href="#servicos">Serviços</a>
+                        <a href="#sobre">Sobre</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Contato</h4>
+                        <a href="https://wa.me/5571999132008" target="_blank">WhatsApp</a>
+                        <a href="mailto:icarofurtado2008@gmail.com">E-mail</a>
+                        <span>Salvador–BA</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Ícaro Furtado. Todos os direitos reservados.</p>
+                <p>Projetado e desenvolvido no Brasil.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão voltar ao topo -->
+    <div class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </div>
+
+    <!-- Cursor Glow (apenas Desktop) -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <script>
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Scroll events: Header blur, Progress bar, Back to top
+        const header = document.getElementById('header');
+        const progressBar = document.getElementById('progressBar');
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            const scrollPos = window.scrollY;
+            const docHeight = document.body.scrollHeight - window.innerHeight;
+            
+            // Header
+            if (scrollPos > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            // Progress
+            const progress = (scrollPos / docHeight) * 100;
+            progressBar.style.width = `${progress}%`;
+            
+            // Back to top
+            if (scrollPos > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // Back to top click
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Mobile Menu Toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        const navItems = document.querySelectorAll('.nav-item');
+
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Active section highlight
+        const sections = document.querySelectorAll('section[id]');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === `#${current}`) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Reveal animations on scroll
+        const reveals = document.querySelectorAll('.reveal');
+        
+        const revealOnScroll = () => {
+            const windowHeight = window.innerHeight;
+            const elementVisible = 100;
+            
+            reveals.forEach(reveal => {
+                const elementTop = reveal.getBoundingClientRect().top;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    reveal.classList.add('active');
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', revealOnScroll);
+        // Trigger once on load
+        revealOnScroll();
+
+        // Cursor Glow effect (Desktop only)
+        const cursorGlow = document.getElementById('cursorGlow');
+        
+        // Só ativa se tiver suporte a hover (dispositivos desktop)
+        if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+            document.addEventListener('mousemove', (e) => {
+                cursorGlow.style.left = `${e.clientX}px`;
+                cursorGlow.style.top = `${e.clientY}px`;
+            });
+
+            // Aumenta o brilho quando passa por links e botões
+            const interactables = document.querySelectorAll('a, button, .project-card, .service-card');
+            
+            interactables.forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursorGlow.style.background = 'radial-gradient(circle, rgba(79, 124, 255, 0.08) 0%, transparent 50%)';
+                    cursorGlow.style.width = '500px';
+                    cursorGlow.style.height = '500px';
+                });
+                
+                el.addEventListener('mouseleave', () => {
+                    cursorGlow.style.background = 'radial-gradient(circle, rgba(147, 51, 234, 0.05) 0%, transparent 60%)';
+                    cursorGlow.style.width = '400px';
+                    cursorGlow.style.height = '400px';
+                });
+            });
+        }
+
+        // Animate numbers
+        const counters = document.querySelectorAll('.stat-value');
+        let hasAnimated = false;
+        
+        const animateNumbers = () => {
+            if (hasAnimated) return;
+            
+            const statsSection = document.querySelector('.hero-stats');
+            const sectionTop = statsSection.getBoundingClientRect().top;
+            
+            if (sectionTop < window.innerHeight) {
+                hasAnimated = true;
+                
+                // Exemplo básico de contador para o +90 e 100%
+                // Como os valores estão fixos com ícones no HTML, a animação seria mais de fade-in
+                // que já é tratado pelo reveal, ou podemos fazer os números rolarem.
+                // Para manter a performance leve, o reveal do header já cuidou bem deles.
+            }
+        };
+        
+        window.addEventListener('scroll', animateNumbers);
+        
+        // Efeito 3D sutil nos cards (apenas desktop)
+        if (window.matchMedia('(hover: hover)').matches) {
+            const cards = document.querySelectorAll('.project-card');
+            
+            cards.forEach(card => {
+                card.addEventListener('mousemove', e => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    
+                    const rotateX = ((y - centerY) / centerY) * -5;
+                    const rotateY = ((x - centerX) / centerX) * 5;
+                    
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+                });
+            });
+        }
+    </script>
 </body>
 </html>
-
-
